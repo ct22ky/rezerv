@@ -2,7 +2,7 @@
   "name": "Резерв+",
   "short_name": "Резерв+",
   "description": "Військово-обліковий документ",
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "/rezerv/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",

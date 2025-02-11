@@ -1,0 +1,30 @@
+/** @format */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1d1d1b; /* Цвет из твоего изображения */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.splash-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.splash-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: hwb(50 59% 18%);
+}

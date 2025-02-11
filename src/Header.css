@@ -1,0 +1,60 @@
+/**
+ * Header.css
+ *
+ * @format
+ */
+
+/* Контейнер для логотипа и кнопки */
+.header-container {
+  position: fixed;
+  top: 4vh;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* Стили для логотипа */
+.logo {
+  width: clamp(120px, 15vw, 120px);
+  height: auto;
+}
+
+/* Стили для кнопки */
+.scan-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background: none;
+  border: none;
+  color: black;
+  padding: 0;
+  cursor: pointer;
+}
+
+.scan-container:focus {
+  outline: none;
+}
+
+/* Блок с текстом внутри кнопки */
+.scan-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: clamp(12px, 3vw, 16px);
+}
+
+.scan-second {
+  position: relative;
+  top: -0.3em;
+}
+
+/* Стили для QR-логотипа */
+.qr-logo {
+  width: clamp(20px, 6vw, 30px);
+  height: auto;
+}

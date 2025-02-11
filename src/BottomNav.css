@@ -1,0 +1,55 @@
+/** @format */
+
+/** @format */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  height: 65px;
+  z-index: 200; /* Меню всегда наверху */
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Делаем меню полупрозрачным во время Face ID, но не скрываем */
+.faceid-active .bottom-nav {
+  opacity: 0.3; /* Меню остаётся внизу, но становится менее заметным */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.nav-icon {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 5px;
+}
+
+/* Красная точка уведомления */
+.menu-item {
+  position: relative;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 2px;
+  right: -6px;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+}

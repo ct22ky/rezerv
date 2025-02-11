@@ -1,0 +1,184 @@
+/**
+ * Центрированный блок
+ *
+ * @format
+ */
+
+.center-block {
+  background-color: #eee7c5;
+  border: 1px solid black;
+  border-radius: 1em;
+  padding: clamp(10px, 5vw, 20px);
+  width: clamp(320px, 95vw, 400px);
+  height: min(70vh, 600px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-top: calc(2vh + 110px);
+  position: relative;
+}
+
+.center-block-text {
+  font-size: clamp(30px, 3vw, 20px);
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: calc(-10vh + 90px);
+}
+
+/* Логотип справа в блоке */
+.center-block-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: clamp(60px, 5vw, 40px);
+  height: auto;
+}
+
+/* Стили для информации о данных */
+.data-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.data-checkmark {
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -3px;
+}
+
+.data-checkmark img {
+  width: 100%;
+  height: 100%;
+}
+
+.data-text {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: black;
+  font-weight: bold;
+}
+
+/* Стили для даты рождения и отсрочки */
+.birth-info,
+.postponement-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.birth-label,
+.postponement-label {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.birth-date,
+.postponement-date {
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: bold;
+  color: #000;
+}
+
+/* Бегущая строка */
+.marquee-container {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  overflow: hidden;
+  background-color: hsl(122, 100%, 18%);
+  padding: 15px 0;
+  margin-top: 25px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-text {
+  display: inline-flex;
+  font-size: clamp(14px, 3vw, 18px);
+  color: white;
+  font-weight: bold;
+  position: relative; /* добавляем относительное позиционирование */
+  top: 0px; /* сдвигаем элемент вверх на 10px */
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-text span {
+  margin-right: 40px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.military-status {
+  font-size: clamp(14px, 3vw, 18px);
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+/* ФИО и кнопка */
+.fio-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-left: 0px;
+}
+
+.fio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fio-item {
+  font-size: clamp(26px, 3vw, 22px);
+  font-weight: bold;
+  color: black;
+}
+
+/* Кнопка */
+.menu-button {
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+.menu-button:active {
+  background-color: darkorange;
+}
+
+.dots {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}

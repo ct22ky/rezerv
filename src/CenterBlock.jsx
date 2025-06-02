@@ -82,7 +82,7 @@ function CenterBlock() {
         <div
           className='center-block back-side'
           onClick={() => setIsFlipped(false)}>
-          <p className='scan-subtitle'>Код дійсний до 08.05.2025</p>
+          <p className='scan-subtitle'>Код дійсний до 14.08.2025</p>
           <img
             src='https://i.ibb.co/svLj2v7H/123.jpg'
             alt='QR Scanner'

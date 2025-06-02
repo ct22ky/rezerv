@@ -27,7 +27,7 @@ export default function NotificationsPage() {
           Військово-обліковий документ вже доступний
         </p>
         <hr className='notification-divider' />
-        <p className='notification-time'>10.02.2025 о 18:46</p>
+        <p className='notification-time'>16.04.2025 о 18:46</p>
       </div>
 
       {/* 🔥 Второе уведомление */}
@@ -38,7 +38,7 @@ export default function NotificationsPage() {
         <p className='notification-text'>
           Очікуйте сповіщення про результат обробки запиту
         </p>
-        <p className='notification-time'>10.02.2025 о 16:26</p>
+        <p className='notification-time'>16.04.2025 о 16:38</p>
       </div>
     </div>
   );

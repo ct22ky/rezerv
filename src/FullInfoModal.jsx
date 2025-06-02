@@ -27,11 +27,11 @@ export default function FullInfoModal({ isOpen, onClose }) {
         {/* ✅ Бегущая строка с анимацией */}
         <div className='scrolling-info-bar'>
           <div className='scrolling-info-text'>
-            <span>На обліку • Документ оновлено о 11:55 | 12.02.2025 </span>
-            <span>На обліку • Документ оновлено о 11:55 | 12.02.2025 </span>
-            <span>На обліку • Документ оновлено о 11:55 | 12.02.2025 </span>
-            <span>На обліку • Документ оновлено о 11:55 | 12.02.2025 </span>
-            <span>На обліку • Документ оновлено о 11:55 | 12.02.2025 </span>
+            <span>На обліку • Документ оновлено о 11:55 | 16.04.2025 </span>
+            <span>На обліку • Документ оновлено о 11:55 | 16.04.2025 </span>
+            <span>На обліку • Документ оновлено о 11:55 | 16.04.2025 </span>
+            <span>На обліку • Документ оновлено о 11:55 | 16.04.2025 </span>
+            <span>На обліку • Документ оновлено о 11:55 | 16.04.2025 </span>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ export default function FullInfoModal({ isOpen, onClose }) {
         <div className='defer-card'>
           <div className='defer-row'>
             <p className='defer-label'>Відстрочка до:</p>
-            <p className='defer-value'>08.05.2025</p>
+            <p className='defer-value'>14.08.2025</p>
           </div>
           <div className='defer-divider'></div>
           <div className='defer-row'>

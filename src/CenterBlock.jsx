@@ -39,17 +39,17 @@ function CenterBlock() {
 
           <div className='postponement-info'>
             <span className='postponement-label'>Відстрочка до:</span>
-            <span className='postponement-date'>08.05.2025</span>
+            <span className='postponement-date'>14.08.2025</span>
           </div>
 
           <div className='marquee-container'>
             <div className='marquee-text'>
-              <span>На обліку • Документ оновлено о 11:55 | 12.02.2025</span>
-              <span>На обліку • Документ оновлено о 11:55 | 12.02.2025</span>
-              <span>На обліку • Документ оновлено о 11:55 | 12.02.2025</span>
-              <span>На обліку • Документ оновлено о 11:55 | 12.02.2025</span>
-              <span>На обліку • Документ оновлено о 11:55 | 12.02.2025</span>
-              <span>На обліку • Документ оновлено о 11:55 | 12.02.2025</span>
+              <span>На обліку • Документ оновлено о 11:55 | 16.04.2025</span>
+              <span>На обліку • Документ оновлено о 11:55 | 16.04.2025</span>
+              <span>На обліку • Документ оновлено о 11:55 | 16.04.2025</span>
+              <span>На обліку • Документ оновлено о 11:55 | 16.04.2025</span>
+              <span>На обліку • Документ оновлено о 11:55 | 16.04.2025</span>
+              <span>На обліку • Документ оновлено о 11:55 | 16.04.2025</span>
             </div>
           </div>
 
@@ -107,7 +107,7 @@ function CenterBlock() {
               setIsFullInfoOpen(true); // ✅ Открываем новое
             }}>
             <img
-              src='https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/more-info-icon.png'
+              src='https://img.icons8.com/?size=100&id=14093&format=png&color=000000'
               alt='Повна інформація'
               className='flip-modal-icon'
             />

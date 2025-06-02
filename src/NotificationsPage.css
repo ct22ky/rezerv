@@ -1,0 +1,81 @@
+/** @format */
+
+.notifications-page-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.back-icon {
+  width: 28px;
+  height: auto;
+}
+
+.notifications-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* ✅ Общие стили карточек */
+.notification-card {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* ✅ Первая карточка (белая) */
+.notification-card.primary {
+  background: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Вторая карточка (бежевая) */
+.notification-card.secondary {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* ✅ Заголовок уведомления */
+.notification-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ✅ Текст уведомления */
+.notification-text {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+/* ✅ Разделительная линия */
+.notification-divider {
+  margin: 10px 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* ✅ Время уведомления */
+.notification-time {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}

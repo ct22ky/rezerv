@@ -1,0 +1,333 @@
+/** @format */
+
+/* 🔹 Анимация открытия и закрытия модального окна */
+.full-info-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+  opacity: 0;
+
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* 🔹 Показываем окно при открытии */
+.full-info-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.full-info-modal {
+  width: 100%;
+  max-width: 100vw;
+  height: 80vh; /* ✅ Немного уменьшаем высоту */
+  min-height: 60vh; /* ✅ Ограничиваем минимальную высоту */
+  background: #d5d3be;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  overflow-y: auto; /* ✅ Добавляем прокрутку, если контент выходит за границы */
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Анимация появления */
+.full-info-overlay.open .full-info-modal {
+  transform: translateY(0);
+}
+
+/* 🔹 Фиксированная линия для перетаскивания */
+.modal-drag-handle {
+  width: 50px;
+  height: 5px;
+  background: #000000;
+  border-radius: 10px;
+  margin: 10px auto;
+  position: sticky; /* ✅ Фиксируем линию */
+  top: 10px; /* ✅ Оставляем её в верхней части модалки */
+  z-index: 100;
+  background: #000000;
+}
+
+/* Заголовок */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 🔹 Заголовок текст в три строки */
+.modal-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px; /* Немного уменьшаем размер текста */
+  font-weight: bold;
+  line-height: 1; /* Уменьшаем межстрочный интервал */
+  text-align: left; /* Выравнивание влево */
+  margin-top: 20px;
+}
+
+.modal-title h2 {
+  margin: 0; /* Убираем отступы у заголовков */
+  padding: 0;
+}
+
+.modal-icon {
+  width: 50px !important; /* Принудительный размер */
+  height: auto !important; /* Сохранение пропорций */
+  max-width: none !important; /* Убираем ограничения */
+  flex-shrink: 0; /* Запрещаем уменьшение */
+  margin-bottom: 40px;
+}
+
+/* 🔹 ✅ Бегущая строка с анимацией */
+.scrolling-info-bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #6c491f;
+  padding: 15px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.scrolling-info-text {
+  display: flex;
+  color: hsl(0, 0%, 100%);
+  gap: 50px;
+  animation: scroll-text 80s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll-text {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* 🔹 ✅ Первый белый блок (ФИО + статус + разделительная линия + дата + РНОКПП) */
+.info-card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 100px; /* Добавляет отступ после бегущей строки */
+}
+
+.info-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-status {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: -5px;
+}
+
+/* 🔹 Разделительная линия */
+.info-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+
+/* 🔹 Дата рождения и РНОКПП в два столбца */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.info-label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.info-value {
+  font-weight: bold;
+  color: black;
+}
+
+/* 🔹 ✅ Второй белый блок (Отсрочка + тип отсрочки) */
+.defer-card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.defer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.defer-label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.defer-value {
+  font-weight: bold;
+  color: black;
+}
+
+.defer-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+
+/* 🔹 ✅ Третий белый блок (Постанова ВЛК + Дата ВЛК) */
+.vlk-card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.vlk-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.vlk-label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.vlk-value {
+  font-weight: bold;
+  color: black;
+}
+
+/* 🔹 ✅ Четвёртый белый блок (ТЦК + звание + ВОС + категория + реестр) */
+.tcc-card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tcc-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tcc-subtitle {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 5px;
+}
+
+.tcc-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+
+.tcc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.tcc-label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.tcc-value {
+  font-weight: bold;
+  color: black;
+}
+
+.tcc-group {
+  margin-top: 10px;
+}
+
+/* 🔹 ✅ Пятый белый блок (Телефон + Адрес проживания) */
+.contact-card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-group {
+  margin-bottom: 10px;
+}
+
+.contact-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+/* 🔹 ✅ Шестой белый блок (Дата уточнення даних) */
+.data-update-card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.data-update-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.data-update-label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.data-update-value {
+  font-weight: bold;
+  color: black;
+}

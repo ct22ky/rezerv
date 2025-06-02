@@ -1,0 +1,84 @@
+/** @format */
+
+.user-menu-page {
+  position: absolute; /* Принудительно фиксируем в левом верхнем углу */
+  top: 0;
+  left: 0;
+  width: 90%; /* Охватывает всю ширину экрана */
+  height: 100vh; /* Высота во весь экран */
+  display: flex;
+  justify-content: flex-start; /* Оставляем всё слева */
+  align-items: flex-start !important; /* Отключаем центрирование */
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.user-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important; /* Левое выравнивание */
+  width: 100%; /* Занимает всю ширину */
+}
+
+.user-menu-item {
+  display: flex;
+  align-items: center;
+  color: #000;
+  gap: 10px;
+  margin: 15px 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.user-menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.user-menu-icon {
+  font-size: 24px;
+}
+
+.user-menu-footer-info {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Чёрный цвет и увеличенный размер */
+.user-menu-footer-info span:first-child,
+.user-menu-footer-info span:nth-child(2) {
+  font-size: 16px; /* Увеличенный размер */
+  font-weight: bold; /* Делаем жирным */
+  color: #000; /* Чёрный цвет */
+  margin-bottom: 15px; /* Отступ между строками */
+}
+
+/* Прозрачность и уменьшенный размер */
+.user-menu-footer-info span:last-child {
+  font-size: 14px; /* Чуть меньше */
+  color: rgba(0, 0, 0, 0.5); /* Чёрный с прозрачностью */
+}
+
+.user-menu-icon {
+  width: 24px; /* Размер контейнера иконки */
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-menu-icon img {
+  width: 20px; /* Размер самой иконки */
+  height: 20px;
+  object-fit: contain;
+}
+
+.user-menu-divider {
+  width: 100%; /* Растянуть на всю ширину */
+  height: 1px; /* Высота линии */
+  background-color: rgba(0, 0, 0, 0.1); /* Тонкий полупрозрачный цвет */
+  margin: 10px 0; /* Отступ сверху и снизу */
+}

@@ -19,7 +19,7 @@
   font-weight: 400;
   color-scheme: light dark;
   color: #000000de;
-  background-color: hsl(49, 100%, 91%);
+  background-color: #e0ddca;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -36,6 +36,9 @@ body {
   padding: 0;
   overscroll-behavior: none; /* Запрещает оттяжку страницы */
   overflow: hidden;
+  overflow-x: hidden; /* Отключаем горизонтальный скролл */
+  width: 100vw;
+  max-width: 100%;
 }
 
 /** @format */

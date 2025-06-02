@@ -1,26 +1,36 @@
 /** @format */
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
+import ScanModal from "./ScanModal"; // ✅ Импорт модального окна
 
 function Header() {
-  return (
-    <div className='header-container'>
-      <img
-        src='https://upload.wikimedia.org/wikipedia/uk/0/01/Reserve-plus-logo.png'
-        alt='Логотип'
-        className='logo'
-      />
+  const [isModalOpen, setModalOpen] = useState(false); // ✅ Состояние для модалки
 
-      <button
-        className='scan-container'
-        onClick={() => alert("Кнопка нажата!")}>
-        <div className='scan-text'>
-          <span className='scan-first'>Сканувати</span>
-          <span className='scan-second'>документ</span>
-        </div>
-        <img src='/qr.png' alt='QR логотип' className='qr-logo' />
-      </button>
-    </div>
+  return (
+    <>
+      <div className='header-container'>
+        <img
+          src='https://upload.wikimedia.org/wikipedia/uk/0/01/Reserve-plus-logo.png'
+          alt='Логотип'
+          className='logo'
+        />
+
+        <button className='scan-container' onClick={() => setModalOpen(true)}>
+          <div className='scan-text'>
+            <span className='scan-first'>Сканувати</span>
+            <span className='scan-second'>документ</span>
+          </div>
+          <img
+            src='https://i.ibb.co/vvwJTPnW/qr.png'
+            alt='QR логотип'
+            className='qr-logo'
+          />
+        </button>
+      </div>
+
+      {/* ✅ Подключаем модалку */}
+      <ScanModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+    </>
   );
 }
 

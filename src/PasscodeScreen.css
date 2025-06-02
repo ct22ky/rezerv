@@ -1,0 +1,98 @@
+/** @format */
+
+.passcode-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.passcode-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.passcode-dots {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dot.filled {
+  background-color: black;
+}
+
+/* ✅ Анимация тряски */
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.passcode-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.key {
+  width: 100px;
+  height: 100px;
+  font-size: 26px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  color: black;
+}
+
+.key.special {
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 28px;
+}
+
+.forgot-passcode {
+  margin-top: 60px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+/** @format */
+
+.face-id-icon,
+.delete-icon {
+  width: 60px;
+  height: 60px;
+}
